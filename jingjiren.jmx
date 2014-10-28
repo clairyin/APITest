@@ -351,13 +351,13 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/userPhoto/?is_nocheck=1&amp;brokerId=7790834&amp;photoFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/userPhoto/?is_nocheck=1&amp;brokerId=1389647&amp;photoFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -383,7 +383,7 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
@@ -485,13 +485,13 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/bnsCard/?is_nocheck=1&amp;brokerId=http://api.anjuke.test/mobile-ajk-broker/1.0/broker/upload/bnsCard/?is_nocheck=1&amp;brokerId=207495&amp;bnsCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}&amp;bnsCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/bnsCard/?is_nocheck=1&amp;brokerId=1389647&amp;bnsCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}&amp;bnsCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -687,13 +687,13 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/userCard/?is_nocheck=1&amp;userCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}&amp;idCardNo=330719196804253671&amp;brokerId=207495</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/userCard/?is_nocheck=1&amp;userCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}&amp;idCardNo=330719196804253671&amp;brokerId=1389647</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
