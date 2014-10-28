@@ -1,0 +1,1963 @@
+﻿<html dir="ltr">
+<head>
+</head>
+<body>
+<div>
+
+
+<table border="1">
+<tr>
+<th colspan=9><caption align="center"><b>API-CI自动化测试报告</b></caption></th>
+</tr>
+<tr>
+<td width="80" align=center><font>应用模块</font></td>
+<td width="80" align=center><font>API版本</font></td>
+<td width="80" align=center><font>接口名字</font></td>
+<td width="80" align=center><font>接口描述</font></td>
+<td width="170" align=center><font>测试结果（失败/总数）</font></td>
+</tr>
+<!-- 接口已经弃用 20140730
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>feedback_anjuke</font></td>
+<td width="260"><font>获取用户推送消息的状态</font></td>
+<td width="170" align=right><font>0_wechat_result</font></td>
+</tr>
+
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>feedback_broker2</font></td>
+<td width="260"><font>获取经纪人推送消息的状态</font></td>
+<td width="170" align=right><font>1_wechat_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>notifyId_received</font></td>
+<td width="260"><font>更新消息状态，更新为received</font></td>
+<td width="170" align=right><font>2_wechat_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>notifyId_read</font></td>
+<td width="260"><font>更新消息状态，更新为read</font></td>
+<td width="170" align=right><font>3_wechat_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>notifyId_delete</font></td>
+<td width="260"><font>更新消息状态，更新为delete</font></td>
+<td width="170" align=right><font>4_wechat_result</font></td>
+</tr>
+-->
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>weiliao.user.getFriends</font></td>
+<td width="260"><font>获取指定微聊帐号的联系人列表(好友，服务号，公众号)</font></td>
+<td width="170" align=right><font>0_wechat_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>weiliao.user.broker.info</font></td>
+<td width="260"><font>获取经纪人微聊信息</font></td>
+<td width="170" align=right><font>1_wechat_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>weiliao.message.syncReadMessage</font></td>
+<td width="260"><font>同步阅读消息状态</font></td>
+<td width="170" align=right><font>2_wechat_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>weiliao.message.getNoReplyUserList</font></td>
+<td width="260"><font>获取未回复用户列表</font></td>
+<td width="170" align=right><font>3_wechat_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>weiliao.message.publicservice.feedbackByUser</font></td>
+<td width="260"><font>微聊帐号向service帐号反馈消息</font></td>
+<td width="170" align=right><font>4_wechat_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>weiliao.message.getAllNewMessages</font></td>
+<td width="260"><font>获取指定公众号的反馈新消息</font></td>
+<td width="170" align=right><font>5_wechat_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>微聊</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>weiliao.message.sendFriendMessage</font></td>
+<td width="260"><font>向指定好友发送一条消息</font></td>
+<td width="170" align=right><font>6_wechat_result</font></td>
+
+
+
+</tbody>
+</table>
+<table border="1">
+<tbody>
+<br />
+<tr>
+<td width="80" align=center><font>应用模块</font></td>
+<td width="80" align=center><font>API版本</font></td>
+<td width="80" align=center><font>接口名字</font></td>
+<td width="80" align=center><font>接口描述</font></td>
+<td width="170" align=center><font>测试结果（失败/总数）</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>admin.getversion</font></td>
+<td width="260"><font>返回线上版本信息,只线上环境使用</font></td>
+<td width="170" align=right><font>0_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>friend.getfriend</font></td>
+<td width="260"><font>获得推荐应用列表</font></td>
+<td width="170" align=right><font>1_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>admin.recordaction</font></td>
+<td width="260"><font>记录用户行为</font></td>
+<td width="170" align=right><font>2_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>admin.writeAppLog</font></td>
+<td width="260"><font>记录应用程序日志</font></td>
+<td width="170" align=right><font>3_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>admin.getMessage</font></td>
+<td width="260"><font>获取系统推送消息</font></td>
+<td width="170" align=right><font>4_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>admin.postFeedback</font></td>
+<td width="260"><font>记录用户反馈信息</font></td>
+<td width="170" align=right><font>5_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>admin.recordPhoneCall</font></td>
+<td width="260"><font>记录经纪人拨打电话记录</font></td>
+<td width="170" align=right><font>6_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>admin.recordSMS</font></td>
+<td width="260"><font>记录用户发送的短信内容</font></td>
+<td width="170" align=right><font>7_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>admin.writeCrashLog</font></td>
+<td width="260"><font>crash日志</font></td>
+<td width="170" align=right><font>8_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>getadconfig</font></td>
+<td width="260"><font>获取广告配置</font></td>
+<td width="170" align=right><font>9_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.view</font></td>
+<td width="260"><font>记录用户访问过的房源日志（保留最近20条）</font></td>
+<td width="170" align=right><font>10_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.getpropnum</font></td>
+<td width="260"><font>获取房源数量</font></td>
+<td width="170" align=right><font>11_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.searchV2</font></td>
+<td width="260"><font>房源列表查询2.0</font></td>
+<td width="170" align=right><font>12_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.home</font></td>
+<td width="260"><font>上海房源或者推荐房源</font></td>
+<td width="170" align=right><font>13_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.recommend</font></td>
+<td width="260"><font>房源推荐列表</font></td>
+<td width="170" align=right><font>14_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.get</font></td>
+<td width="260"><font>根据房源ID获得房源信息</font></td>
+<td width="170" align=right><font>15_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.getDescription</font></td>
+<td width="260"><font>获得房源描述</font></td>
+<td width="170" align=right><font>16_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.search</font></td>
+<td width="260"><font>房源列表查询</font></td>
+<td width="170" align=right><font>17_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.searchV3</font></td>
+<td width="260"><font>房源列表查询3.0</font></td>
+<td width="170" align=right><font>18_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.viewrecommend</font></td>
+<td width="260"><font>房源单页推荐</font></td>
+<td width="170" align=right><font>19_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>auth.signin</font></td>
+<td width="260"><font>用户登录</font></td>
+<td width="170" align=right><font>20_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>haopantong.click</font></td>
+<td width="260"><font>记录好盘点击量</font></td>
+<td width="170" align=right><font>21_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>location.getCity</font></td>
+<td width="260"><font>根据地理位置(坐标信息)定位城市</font></td>
+<td width="170" align=right><font>22_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>meta.loan.getRates</font></td>
+<td width="260"><font>获取贷款利率</font></td>
+<td width="170" align=right><font>23_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>meta.loan.getDynaRate</font></td>
+<td width="260"><font>获取贷款利率折扣信息</font></td>
+<td width="170" align=right><font>24_anjuke_result</font></td>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>city.getList</font></td>
+<td width="260"><font>获得城市列表</font></td>
+<td width="170" align=right><font>25_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>city.get</font></td>
+<td width="260"><font>获取城市区域板块信息</font></td>
+<td width="170" align=right><font>26_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>city.getFilters</font></td>
+<td width="260"><font>根据城市ID获取城市可以用的搜索条件列表</font></td>
+<td width="170" align=right><font>27_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>community.get</font></td>
+<td width="260"><font>获取小区信息</font></td>
+<td width="170" align=right><font>28_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>community.search</font></td>
+<td width="260"><font>(旧)获取小区信息，对于新开城市不显示相关的价格信息（不全）获取小区200条信息后内排序</font></td>
+<td width="170" align=right><font>29_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>community.searchMap</font></td>
+<td width="260"><font>根据地理位置搜索小区</font></td>
+<td width="170" align=right><font>30_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>community.searchCommunityMap</font></td>
+<td width="260"><font>根据地图和均价搜索小区信息</font></td>
+<td width="170" align=right><font>31_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>favorites.getProperties</font></td>
+<td width="260"><font>获得收藏房源</font></td>
+<td width="170" align=right><font>32_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>favorites.getPropertiesAndDetail</font></td>
+<td width="260"><font>获得收藏房源（带单页数据）</font></td>
+<td width="170" align=right><font>33_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>favorites.addProperty</font></td>
+<td width="260"><font>增加收藏房源</font></td>
+<td width="170" align=right><font>34_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>favorites.removeProperty</font></td>
+<td width="260"><font>删除收藏房源</font></td>
+<td width="170" align=right><font>35_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>favorites.history</font></td>
+<td width="260"><font>房源或小区收藏记录登记</font></td>
+<td width="170" align=right><font>36_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>favorites.getCommunities</font></td>
+<td width="260"><font>获取小区收藏列表（需要将不需要请求的字段去掉 ，API需要做的事情）</font></td>
+<td width="170" align=right><font>37_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>favorites.addCommunity</font></td>
+<td width="260"><font>添加收藏小区</font></td>
+<td width="170" align=right><font>38_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>favorites.removeCommunity</font></td>
+<td width="260"><font>删除收藏小区</font></td>
+<td width="170" align=right><font>39_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>broker.getbasic</font></td>
+<td width="260"><font>根据经纪人ID获得经纪人基本信息</font></td>
+<td width="170" align=right><font>40_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>broker.getevaluate</font></td>
+<td width="260"><font>根据经纪人ID获得经纪人评价信息</font></td>
+<td width="170" align=right><font>41_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>broker.getcommstat</font></td>
+<td width="260"><font>根据评论id获得评论状态</font></td>
+<td width="170" align=right><font>42_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>broker.getComments</font></td>
+<td width="260"><font>获得经纪人评价列表</font></td>
+<td width="170" align=right><font>43_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>broker.addCommentsV2</font></td>
+<td width="260"><font>评论经纪人接口</font></td>
+<td width="170" align=right><font>44_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>broker.addComments</font></td>
+<td width="260"><font>添加评论信息</font></td>
+<td width="170" align=right><font>45_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>broker.get</font></td>
+<td width="260"><font>获取经纪人信息</font></td>
+<td width="170" align=right><font>46_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>recommend.getPropertyTypes</font></td>
+<td width="260"><font>推荐房源类型列表</font></td>
+<td width="170" align=right><font>47_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>recommend.getProperties</font></td>
+<td width="260"><font>获得推荐类型列表</font></td>
+<td width="170" align=right><font>48_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>recommend.guessProperties</font></td>
+<td width="260"><font>猜你喜欢房源列表（详细）</font></td>
+<td width="170" align=right><font>49_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>recommend.getPropertiesAndDetail</font></td>
+<td width="260"><font>推荐房源列表（带单页数据）</font></td>
+<td width="170" align=right><font>50_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>recommend.guessPropertiesAndDetail</font></td>
+<td width="260"><font>猜你喜欢的房源列表（带单页数据）</font></td>
+<td width="170" align=right><font>51_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>broker.search</font></td>
+<td width="260"><font>根电话或者经纪人姓名据索指定城市的经纪人</font></td>
+<td width="170" align=right><font>52_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>community.getByKeywords</font></td>
+<td width="260"><font>小区名完全匹配</font></td>
+<td width="170" align=right><font>53_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>location.getByKeywords</font></td>
+<td width="260"><font>根据关键词匹配小区信息</font></td>
+<td width="170" align=right><font>54_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>community.autoComplete</font></td>
+<td width="260"><font>根据用户输入的关键词，自动提示相关名字</font></td>
+<td width="170" align=right><font>55_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>meta.keywords.autoComplete</font></td>
+<td width="260"><font>搜索关键词自动完成</font></td>
+<td width="170" align=right><font>56_anjuke_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>location.geo</font></td>
+<td width="260"><font>根据地址找坐标</font></td>
+<td width="170" align=right><font>57_anjuke_result</font></td>
+
+<!-- 
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.criticize</font></td>
+<td width="260"><font>踩房源</font></td>
+<td width="170" align=right><font>anjuke_result12</font></td> 
+#### 动态输入。。。数据重复输入（只能点击一次）#####
+-->
+<!-- 
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>property.getdescandcomms</font></td>
+<td width="260"><font>房源描述与真实性</font></td>
+######link中有特殊符号
+/mobile/1.3/property.getdescandcomms?api_key
+=ef7545201a2bc5911cdb43527b18b8c1&
+guid=gmgufs010&id=11-211109269   ########¬e= &######
+sig=ee57a44baf8fe871800e7c23def18ca1
+<td width="170" align=right><font>anjuke_result13</font></td>   
+-->
+<!-- 
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>auth.signup</font></td>
+<td width="260"><font>用户注册</font></td>
+<td width="170" align=right><font>anjuke_result23</font></td>
+###不能重复注册###
+<!-- 
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>location.guess</font></td>
+<td width="260"><font>基站定位、WiFi定位</font></td>
+<td width="170" align=right><font>anjuke_result27</font></td>
+####输入参数不正确####
+-->
+<!--
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>broker.getcomms</font></td>
+<td width="260"><font>根据经纪人ID获得评论</font></td>
+<td width="170" align=right><font>anjuke_result52</font></td>
+####数据不存在####
+-->
+<!--
+<td width="80" align=center><font>安居客</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>broker.getcommsV2</font></td>
+<td width="260"><font>经纪人评价信息V2</font></td>
+<td width="170" align=right><font>anjuke_result58</font></td>
+####数据不存在####
+-->
+
+<tr>
+</table>
+<br />
+<table border="1">
+<tr>
+<td width="80" align=center><font>应用模块</font></td>
+<td width="80" align=center><font>API版本</font></td>
+<td width="80" align=center><font>接口名字</font></td>
+<td width="80" align=center><font>接口描述</font></td>
+<td width="170" align=center><font>测试结果（失败/总数）</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>property.searchDetail</font></td>
+<td width="260"><font>搜索房源列表（含房源信息）</font></td>
+<td width="170" align=right><font>0_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>property.searchDetailV2</font></td>
+<td width="260"><font>搜索房源列表V2</font></td>
+<td width="170" align=right><font>1_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>property.search</font></td>
+<td width="260"><font>搜索房源列表</font></td>
+<td width="170" align=right><font>2_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>community.get</font></td>
+<td width="260"><font>获取小区信息</font></td>
+<td width="170" align=right><font>3_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>community.search</font></td>
+<td width="260"><font>小区搜索</font></td>
+<td width="170" align=right><font>4_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>community.searchMapByLngLat</font></td>
+<td width="260"><font>通过经纬度获取小区</font></td>
+<td width="170" align=right><font>5_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>community.searchMapByArea</font></td>
+<td width="260"><font>通过区域板块获取小区</font></td>
+<td width="170" align=right><font>6_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>community.searchMapByMetro</font></td>
+<td width="260"><font>通过地铁获取小区</font></td>
+<td width="170" align=right><font>7_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>broker.get</font></td>
+<td width="260"><font>获取经纪人信息</font></td>
+<td width="170" align=right><font>8_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>property.searchByLngLat</font></td>
+<td width="260"><font>通过经纬度搜索房源</font></td>
+<td width="170" align=right><font>9_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>property.searchByMetro</font></td>
+<td width="260"><font>通过地铁找房</font></td>
+<td width="170" align=right><font>10_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>property.searchByComm</font></td>
+<td width="260"><font>通过小区找房</font></td>
+<td width="170" align=right><font>11_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>property.get</font></td>
+<td width="260"><font>获取房源详情</font></td>
+<td width="170" align=right><font>12_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>property.searchByArea</font></td>
+<td width="260"><font>通过区域板块找房font></td>
+<td width="170" align=right><font>13_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>city.get</font></td>
+<td width="260"><font>获取城市信息</font></td>
+<td width="170" align=right><font>14_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>city.getList</font></td>
+<td width="260"><font>获取城市列表</font></td>
+<td width="170" align=right><font>15_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>city.getFilters</font></td>
+<td width="260"><font>获取城市筛选条件</font></td>
+<td width="170" align=right><font>16_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>city.getBlockByLatLng</font></td>
+<td width="260"><font>通过经纬度获得区域模块</font></td>
+<td width="170" align=right><font>17_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>auth.signin</font></td>
+<td width="260"><font>登陆</font></td>
+<td width="170" align=right><font>18_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>favorite.getList</font></td>
+<td width="260"><font>获取搜藏列表</font></td>
+<td width="170" align=right><font>19_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>favorite.add</font></td>
+<td width="260"><font>添加收藏房源</font></td>
+<td width="170" align=right><font>20_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>favorite.remove</font></td>
+<td width="260"><font>删除收藏房源</font></td>
+<td width="170" align=right><font>21_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>admin.getversion</font></td>
+<td width="260"><font>返回线上版本信息,只线上环境使用</font></td>
+<td width="170" align=right><font>22_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>recommend.getAction</font></td>
+<td width="260"><font>保护用户行为</font></td>
+<td width="170" align=right><font>23_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>prop.getConfig</font></td>
+<td width="260"><font>房源配置</font></td>
+<td width="170" align=right><font>24_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>prop.getList</font></td>
+<td width="260"><font>获取房源列表3.0</font></td>
+<td width="170" align=right><font>25_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>city.personalPkgs</font></td>
+<td width="260"><font>付费</font></td>
+<td width="170" align=right><font>26_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>city.personalOpenCities</font></td>
+<td width="260"><font>获取试点城市</font></td>
+<td width="170" align=right><font>27_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>prop.getFreeList</font></td>
+<td width="260"><font>获取可免费推广房源列表</font></td>
+<td width="170" align=right><font>28_haozu_result</font></td>
+</tr>
+<!--
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>prop.getIllegalReason</font></td>
+<td width="260"><font>获取房源删除原因</font></td>
+<td width="170" align=right><font>29_haozu_result</font></td>
+</tr>
+-->
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>sms.getLandlordMsg</font></td>
+<td width="260"><font>获取短信</font></td>
+<td width="170" align=right><font>29_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>community.autocomplete</font></td>
+<td width="260"><font>自动匹配小区名称</font></td>
+<td width="170" align=right><font>30_haozu_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>community.autocomplete</font></td>
+<td width="260"><font>小区名自动匹配</font></td>
+<td width="170" align=right><font>31_haozu_result</font></td>
+
+<!--
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>2.0</font></td>
+<td width="180"><font>recommend.getProperty</font></td>
+<td width="260"><font>获取推荐房源</font></td>
+<td width="170" align=right><font>2_haozu_result</font></td>
+####推荐的房源不存在####
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>prop.submit</font></td>
+<td width="260"><font>发布和编辑房源信息</font></td>
+<td width="170" align=right><font>3_haozu_result</font></td>
+####token和userid不一致####
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>prop.offline</font></td>
+<td width="260"><font>房源下线</font></td>
+<td width="170" align=right><font>4_haozu_result</font></td>
+####单个房源只能下线一次####
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>prop.delete</font></td>
+<td width="260"><font>删除房源</font></td>
+<td width="170" align=right><font>5_haozu_result</font></td>
+####单个房源只能删除一次####
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>sms.sendMsgToLandlord</font></td>
+<td width="260"><font>发送短信</font></td>
+<td width="170" align=right><font>6_haozu_result</font></td>
+####无有效联系人####
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>pay</font></td>
+<td width="260"><font>支付接口</font></td>
+<td width="170" align=right><font>7_haozu_result</font></td>
+####数据不存在####
+</tr>
+<tr>
+<td width="80" align=center><font>好租</font></td>
+<td width="80" align=right><font>3.0</font></td>
+<td width="180"><font>prop.pkgFreeOpen</font></td>
+<td width="260"><font>免费推广</font></td>
+<td width="170" align=right><font>8_haozu_result</font></td>
+####无推广房源####
+-->
+
+</tr>
+</table>
+<br />
+<table border="1">
+<tr>
+<td width="80" align=center><font>应用模块</font></td>
+<td width="80" align=center><font>API版本</font></td>
+<td width="80" align=center><font>接口名字</font></td>
+<td width="80" align=center><font>接口描述</font></td>
+<td width="170" align=center><font>测试结果（失败/总数）</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>inform.category</font></td>
+<td width="260"><font>资讯分类</font></td>
+<td width="170" align=right><font>0_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>inform.list</font></td>
+<td width="260"><font>资讯列表</font></td>
+<td width="170" align=right><font>1_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>inform.my.post</font></td>
+<td width="260"><font>我评论的</font></td>
+<td width="170" align=right><font>2_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>inform.view</font></td>
+<td width="260"><font>资讯单页</font></td>
+<td width="170" align=right><font>3_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>inform.content</font></td>
+<td width="260"><font>资讯正文</font></td>
+<td width="170" align=right><font>4_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>inform.post.list</font></td>
+<td width="260"><font>资讯评论列表</font></td>
+<td width="170" align=right><font>5_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>inform.my.reply</font></td>
+<td width="260"><font>获取对我的评论</font></td>
+<td width="170" align=right><font>6_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>inform.my.listen</font></td>
+<td width="260"><font>监控最新更新</font></td>
+<td width="170" align=right><font>7_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>inform.post.reply</font></td>
+<td width="260"><font>资讯的交互评论</font></td>
+<td width="170" align=right><font>8_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>inform.feeds.recommend</font></td>
+<td width="260"><font>根据楼盘id获取该楼盘的所有资讯列表</font></td>
+<td width="170" align=right><font>9_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>collect.loupan.list</font></td>
+<td width="260"><font>我的收藏列表(楼盘)</font></td>
+<td width="170" align=right><font>10_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>collect.prop.list</font></td>
+<td width="260"><font>我的收藏列表(房源)</font></td>
+<td width="170" align=right><font>11_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>collect.prop.update</font></td>
+<td width="260"><font>同步我的收藏(房源)</font></td>
+<td width="170" align=right><font>12_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>collect.loupan.update</font></td>
+<td width="260"><font>同步我的收藏(楼盘)</font></td>
+<td width="170" align=right><font>13_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>login</font></td>
+<td width="260"><font>登陆</font></td>
+<td width="170" align=right><font>14_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>loupan.view</font></td>
+<td width="260"><font>楼盘单页</font></td>
+<td width="170" align=right><font>15_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>loupan.list</font></td>
+<td width="260"><font>得到楼盘列表</font></td>
+<td width="170" align=right><font>16_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>loupan.propsList</font></td>
+<td width="260"><font>得到楼盘下的房源列表</font></td>
+<td width="170" align=right><font>17_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>loupan.traffic</font></td>
+<td width="260"><font>交通查询</font></td>
+<td width="170" align=right><font>18_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>loupan.images</font></td>
+<td width="260"><font>楼盘相册</font></td>
+<td width="170" align=right><font>19_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>loupan.DetailView</font></td>
+<td width="260"><font>楼盘单页-详细页面</font></td>
+<td width="170" align=right><font>20_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>dongtai.view</font></td>
+<td width="260"><font>楼盘动态的单页</font></td>
+<td width="170" align=right><font>21_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>housetype.view</font></td>
+<td width="260"><font>户型详情</font></td>
+<td width="170" align=right><font>22_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>housetype.list</font></td>
+<td width="260"><font>户型列表</font></td>
+<td width="170" align=right><font>23_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>tuangou.list.dongtai</font></td>
+<td width="260"><font>显示当前楼盘的有效团购信息，只显示最近的一条</font></td>
+<td width="170" align=right><font>24_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>props.mapList</font></td>
+<td width="260"><font>房源地图列表</font></td>
+<td width="170" align=right><font>25_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>props.searchList</font></td>
+<td width="260"><font>房源列表</font></td>
+<td width="170" align=right><font>26_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>props.view</font></td>
+<td width="260"><font>楼盘主单页</font></td>
+<td width="170" align=right><font>27_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>tuangou.list.TodayList</font></td>
+<td width="260"><font>今日团购</font></td>
+<td width="170" align=right><font>28_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>tuangou.view.DetailView</font></td>
+<td width="260"><font>团购详细信息</font></td>
+<td width="170" align=right><font>29_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>city.CityList</font></td>
+<td width="260"><font>得到可用的城市列表</font></td>
+<td width="170" align=right><font>30_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>city.RegionList</font></td>
+<td width="260"><font>得到区域列表</font></td>
+<td width="170" align=right><font>31_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>dic.price</font></td>
+<td width="260"><font>得到某个城市的价格筛选区间</font></td>
+<td width="170" align=right><font>32_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>feedback</font></td>
+<td width="260"><font>用户反馈</font></td>
+<td width="170" align=right><font>33_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>suggest</font></td>
+<td width="260"><font>自动提示接口</font></td>
+<td width="170" align=right><font>34_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>props.dics</font></td>
+<td width="260"><font>得到某个城市的价格筛选区间</font></td>
+<td width="170" align=right><font>35_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>daogou.daogouCategory</font></td>
+<td width="260"><font>获取导购分类</font></td>
+<td width="170" align=right><font>36_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>daogou.recommendArticle</font></td>
+<td width="260"><font>导购相关楼盘</font></td>
+<td width="170" align=right><font>37_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>daogou.view</font></td>
+<td width="260"><font>导购单页</font></td>
+<td width="170" align=right><font>38_aifang_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>city.SubRegionLis</font></td>
+<td width="260"><font>得到板块列表</font></td>
+<td width="170" align=right><font>39_aifang_result</font></td>
+
+</table>
+<!--
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>inform.activity.join</font></td>
+<td width="260"><font>资讯活动报名</font></td>
+<td width="170" align=right><font>40_aifang_result</font></td>
+###无活动ID
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>register</font></td>
+<td width="260"><font>注册</font></td>
+<td width="170" align=right><font>41_aifang_result</font></td>
+###只能注册一次
+<tr>
+<td width="80" align=center><font>爱房</font></td>
+<td width="80" align=right><font>1.3</font></td>
+<td width="180"><font>tuangou.view.Join</font></td>
+<td width="260"><font>参加团购</font></td>
+<td width="170" align=right><font>42_aifang_result</font></td>
+###无团购ID信息
+
+
+
+</tr>
+</table>
+<br />
+<table border="1">
+<tr>
+<td width="80" align=center><font>应用模块</font></td>
+<td width="80" align=center><font>API版本</font></td>
+<td width="80" align=center><font>接口名字</font></td>
+<td width="80" align=center><font>接口描述</font></td>
+<td width="170" align=center><font>测试结果（失败/总数）</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>login</font></td>
+<td width="260"><font>经纪人登录</font></td>
+<td width="170" align=right><font>0_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.bid.effect</font></td>
+<td width="260"><font> [二手房]获得经纪人的竞价推广效果</font></td>
+<td width="170" align=right><font>1_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.bid.getrank</font></td>
+<td width="260"><font> [二手房]估算房源竞价排名</font></td>
+<td width="170" align=right><font>2_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.bid.minoffer</font></td>
+<td width="260"><font>[二手房]获得竞价的底价</font></td>
+<td width="170" align=right><font>3_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.fix.getplanceiling</font></td>
+<td width="260"><font>[二手房]获得单个定价组限额</font></td>
+<td width="170" align=right><font>4_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.fix.getplandetail</font></td>
+<td width="260"><font>[二手房]获得某定价推广组详情</font></td>
+<td width="170" align=right><font>5_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.fix.getplans</font></td>
+<td width="260"><font>[二手房]获得定价推广组列表</font></td>
+<td width="170" align=right><font>6_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.prop.publish</font></td>
+<td width="260"><font>[二手房]房源发布</font></td>
+<td width="170" align=right><font>7_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.prop.delprops</font></td>
+<td width="260"><font>[二手房]删除房源（支持批量）</font></td>
+<td width="170" align=right><font>8_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.prop.getcommlist</font></td>
+<td width="260"><font>[二手房]获得小区列表（历史+附近)</font></td>
+<td width="170" align=right><font>9_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.prop.getconfig</font></td>
+<td width="260"><font>[二手房]获得发房的配置</font></td>
+<td width="170" align=right><font>10_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.prop.getfixprops</font></td>
+<td width="260"><font>[二手房]获可定价房源列表</font></td>
+<td width="170" align=right><font>11_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.prop.noplanprops</font></td>
+<td width="260"><font>[二手房]获得未推广房源列表</font></td>
+<td width="170" align=right><font>12_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.prop.noplanproptotal</font></td>
+<td width="260"><font>[二手房] 获得经纪人未推广房源数</font></td>
+<td width="170" align=right><font>13_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.prop.ppc</font></td>
+<td width="260"><font>[二手房]获得经纪人的推广信息</font></td>
+<td width="170" align=right><font>14_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>broker.getinfo</font></td>
+<td width="260"><font>经纪人信息（基本信息）</font></td>
+<td width="170" align=right><font>15_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>broker.getinfoandppc</font></td>
+<td width="260"><font>经纪人信息（基本信息+账户信息）</font></td>
+<td width="170" align=right><font>16_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>comm.getcommbykw</font></td>
+<td width="260"><font>联想搜索小区</font></td>
+<td width="170" align=right><font>17_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.bid.getrank</font></td>
+<td width="260"><font>[租房]估算房源竞价排名</font></td>
+<td width="170" align=right><font>18_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.bid.minoffer</font></td>
+<td width="260"><font>[租房]获得竞价的底价</font></td>
+<td width="170" align=right><font>19_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.fix.getbidprops</font></td>
+<td width="260"><font>[租房]获可竞价房源列表</font></td>
+<td width="170" align=right><font>20_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.fix.getplanceiling</font></td>
+<td width="260"><font>[租房]获得单个定价组限额</font></td>
+<td width="170" align=right><font>21_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.fix.getplandetail</font></td>
+<td width="260"><font>[租房]获得某定价推广组详情</font></td>
+<td width="170" align=right><font>22_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.fix.getplanprops</font></td>
+<td width="260"><font>[租房]获定价组内房源列表</font></td>
+<td width="170" align=right><font>23_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.fix.getplans</font></td>
+<td width="260"><font>[租房]获得某个经纪人的定价计划推广列表</font></td>
+<td width="170" align=right><font>24_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.prop.getcommlist</font></td>
+<td width="260"><font>[租房]获得小区列表(附近小区)</font></td>
+<td width="170" align=right><font>25_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.prop.getconfig</font></td>
+<td width="260"><font>[租房]获的发房的配置</font></td>
+<td width="170" align=right><font>26_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.prop.getfixprops</font></td>
+<td width="260"><font>[租房]获可定价房源列表</font></td>
+<td width="170" align=right><font>27_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.prop.noplanprops</font></td>
+<td width="260"><font>[租房]获得未推广房源列表</font></td>
+<td width="170" align=right><font>28_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.prop.noplanproptotal</font></td>
+<td width="260"><font>[租房]获得经纪人未推广房源数</font></td>
+<td width="170" align=right><font>29_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.prop.ppc</font></td>
+<td width="260"><font>[租房]获得经纪人的推广信息 </font></td>
+<td width="170" align=right><font>30_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.fix.addpropstoplan</font></td>
+<td width="260"><font> [二手房]房源加入定价推广组(可批量)</font></td>
+<td width="170" align=right><font>31_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.fix.addpropstoplan</font></td>
+<td width="260"><font> [二手房]房源加入竞价推广</font></td>
+<td width="170" align=right><font>32_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.bid.spreadstop</font></td>
+<td width="260"><font> [二手房]停止竞价推广</font></td>
+<td width="170" align=right><font>33_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.bid.spreadstart</font></td>
+<td width="260"><font> [二手房]竞价重新推广</font></td>
+<td width="170" align=right><font>34_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.bid.spreadstop</font></td>
+<td width="260"><font> [二手房]停止竞价推广</font></td>
+<td width="170" align=right><font>35_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.bid.getplanprops</font></td>
+<td width="260"><font>[二手房]获得某人竞价房源列表</font></td>
+<td width="170" align=right><font>36_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.bid.cancelplan</font></td>
+<td width="260"><font>[二手房]房源取消竞价</font></td>
+<td width="170" align=right><font>37_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.fix.spreadstart</font></td>
+<td width="260"><font>[二手房]定价重新推广</font></td>
+<td width="170" align=right><font>38_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.fix.getbidprops</font></td>
+<td width="260"><font>[二手房]获可竞价房源列表</font></td>
+<td width="170" align=right><font>39_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.fix.spreadstop</font></td>
+<td width="260"><font>[二手房]定价停止推广</font></td>
+<td width="170" align=right><font>40_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.fix.cancelplan</font></td>
+<td width="260"><font>[二手房]房源取消定价(支持批量)</font></td>
+<td width="170" align=right><font>41_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke.prop.update</font></td>
+<td width="260"><font>[二手房]修改房源信息</font></td>
+<td width="170" align=right><font>42_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.prop.publish</font></td>
+<td width="260"><font>[租房]房源发布</font></td>
+<td width="170" align=right><font>43_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.prop.delprops</font></td>
+<td width="260"><font>[租房]批量删除房源</font></td>
+<td width="170" align=right><font>44_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.fix.addpropstoplan</font></td>
+<td width="260"><font>[租房]房源加入定价推广组(可批量)</font></td>
+<td width="170" align=right><font>45_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.bid.addproptoplan</font></td>
+<td width="260"><font>[租房]房源加入竞价推广</font></td>
+<td width="170" align=right><font>46_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.bid.editplan</font></td>
+<td width="260"><font>[租房]竞价修改出价和预算</font></td>
+<td width="170" align=right><font>47_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.bid.spreadstop</font></td>
+<td width="260"><font>[租房]停止竞价推广</font></td>
+<td width="170" align=right><font>48_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.bid.spreadstart</font></td>
+<td width="260"><font>[租房]竞价重新推广</font></td>
+<td width="170" align=right><font>49_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.bid.spreadstop</font></td>
+<td width="260"><font>[租房]停止竞价推广</font></td>
+<td width="170" align=right><font>50_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.bid.getplanprops</font></td>
+<td width="260"><font>[租房]获得某人竞价房源列表</font></td>
+<td width="170" align=right><font>51_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.fix.spreadstart</font></td>
+<td width="260"><font>[租房]定价重新推广</font></td>
+<td width="170" align=right><font>52_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.fix.spreadstop</font></td>
+<td width="260"><font>[租房]定价停止推广</font></td>
+<td width="170" align=right><font>53_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.bid.cancelplan</font></td>
+<td width="260"><font>[租房]房源取消竞价</font></td>
+<td width="170" align=right><font>54_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang.fix.cancelplan</font></td>
+<td width="260"><font>[租房]房源取消定价(支持批量)</font></td>
+<td width="170" align=right><font>55_jingjiren_result</font></td>
+
+<!--
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>haopan.proplist</font></td>
+<td width="260"><font>可供添加的房源列表</font></td>
+<td width="170" align=right><font>1_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>haopan.getinfo</font></td>
+<td width="260"><font>获取经纪人好盘信息</font></td>
+<td width="170" align=right><font>2_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>fixed.list</font></td>
+<td width="260"><font>定价计划列表</font></td>
+<td width="170" align=right><font>3_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>fixed.get</font></td>
+<td width="260"><font>定价计划详情</font></td>
+<td width="170" align=right><font>4_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>fixed.resume</font></td>
+<td width="260"><font>定价计划重新推广</font></td>
+<td width="170" align=right><font>5_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>bid.online</font></td>
+<td width="260"><font>竞价计划线上信息</font></td>
+<td width="170" align=right><font>6_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>bid.list</font></td>
+<td width="260"><font>竞价计划列表</font></td>
+<td width="170" align=right><font>7_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>fixed.online</font></td>
+<td width="260"><font>获取定价推广计划线上信息</font></td>
+<td width="170" align=right><font>8_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>comm.getall</font></td>
+<td width="260"><font>获取城市所有有效小区信息</font></td>
+<td width="170" align=right><font>9_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>comm.getusua</font></td>
+<td width="260"><font>获取经纪人常用小区</font></td>
+<td width="170" align=right><font>10_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>comm.getupdate</font></td>
+<td width="260"><font>更新小区信息</font></td>
+<td width="170" align=right><font>11_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>broker.sign</font></td>
+<td width="260"><font>经纪人签到</font></td>
+<td width="170" align=right><font>12_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>broker.getsign</font></td>
+<td width="260"><font>获取经纪人签到记录</font></td>
+<td width="170" align=right><font>13_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>comm.getbrokersign</font></td>
+<td width="260"><font>获取小区签到记录</font></td>
+<td width="170" align=right><font>14_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>broker.getsignall</font></td>
+<td width="260"><font>经纪人签到详细</font></td>
+<td width="170" align=right><font>15_jingjiren_result</font></td>
+<!--
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>fixed.suspend</font></td>
+<td width="260"><font>定价计划暂停</font></td>
+<td width="170" align=right><font>5_jingjiren_result</font></td>
+只能跑一次-->
+<!--
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>bid.update</font></td>
+<td width="260"><font>竞价计划更新</font></td>
+<td width="170" align=right><font>10_jingjiren_result</font></td>
+只能跑一次-->
+<!--
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>bid.get</font></td>
+<td width="260"><font>竞价计划详情</font></td>
+<td width="170" align=right><font>8_jingjiren_result</font></td>
+-->
+
+
+<br/>
+<table border="1">
+<tr>
+<td width="80" align=center><font>应用模块</font></td>
+<td width="80" align=center><font>API版本</font></td>
+<td width="80" align=center><font>接口名字</font></td>
+<td width="80" align=center><font>接口描述</font></td>
+<td width="170" align=center><font>测试结果（失败/总数）</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>login</font></td>
+<td width="260"><font>经纪人登录</font></td>
+<td width="170" align=right><font>0_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>login</font></td>
+<td width="260"><font>经纪人登录：用户名为空</font></td>
+<td width="170" align=right><font>1_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>login</font></td>
+<td width="260"><font>经纪人登录：密码为空</font></td>
+<td width="170" align=right><font>2_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>callAnalysis</font></td>
+<td width="260"><font>客户分析</font></td>
+<td width="170" align=right><font>3_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>todayConsumeInfo</font></td>
+<td width="260"><font>经纪人今日花费和点击</font></td>
+<td width="170" align=right><font>4_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>anjuke/prop/todayConsumeInfo</font></td>
+<td width="260"><font>经纪人今日花费和点击二手房</font></td>
+<td width="170" align=right><font>5_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>zufang/prop/todayConsumeInfo</font></td>
+<td width="260"><font>经纪人今日花费和点击租房</font></td>
+<td width="170" align=right><font>6_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>combo/list</font></td>
+<td width="260"><font>端口套餐列表</font></td>
+<td width="170" align=right><font>7_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>upload/userPhoto</font></td>
+<td width="260"><font>经纪人头像上传</font></td>
+<td width="170" align=right><font>8_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>upload/userPhoto</font></td>
+<td width="260"><font>经纪人头像上传：brokerId传空</font></td>
+<td width="170" align=right><font>9_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>upload/userPhoto</font></td>
+<td width="260"><font>经纪人头像上传：图片格式报错</font></td>
+<td width="170" align=right><font>10_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>upload/userPhoto</font></td>
+<td width="260"><font>经纪人头像上传：图片大小报错</font></td>
+<td width="170" align=right><font>11_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>upload/bnsCard</font></td>
+<td width="260"><font>经纪人名片上传</font></td>
+<td width="170" align=right><font>12_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>upload/bnsCard</font></td>
+<td width="260"><font>经纪人名片上传：无门店报错</font></td>
+<td width="170" align=right><font>13_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>upload/bnsCard</font></td>
+<td width="260"><font>经纪人名片上传：brokerId传空</font></td>
+<td width="170" align=right><font>14_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>upload/bnsCard</font></td>
+<td width="260"><font>经纪人名片上传：图片格式报错</font></td>
+<td width="170" align=right><font>15_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>upload/bnsCard</font></td>
+<td width="260"><font>经纪人名片上传：图片>600kb报错</font></td>
+<td width="170" align=right><font>16_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>upload/bnsCard</font></td>
+<td width="260"><font>经纪人名片上传：图片<20kb报错</font></td>
+<td width="170" align=right><font>17_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>upload/userCard</font></td>
+<td width="260"><font>经纪人身份证上传：重复上传报错</font></td>
+<td width="170" align=right><font>18_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>userPhoto/summary</font></td>
+<td width="260"><font>经纪人头像概况</font></td>
+<td width="170" align=right><font>19_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>userCard/summary</font></td>
+<td width="260"><font>经纪人身份证概况</font></td>
+<td width="170" align=right><font>20_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>bnsCard/summary</font></td>
+<td width="260"><font>经纪人名片概况</font></td>
+<td width="170" align=right><font>21_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>userPhoto/summary</font></td>
+<td width="260"><font>经纪人头像未通过审核</font></td>
+<td width="170" align=right><font>22_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>userCard/summary</font></td>
+<td width="260"><font>经纪人身份证未通过审核</font></td>
+<td width="170" align=right><font>23_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>userPhoto/summary</font></td>
+<td width="260"><font>经纪人头像未上传</font></td>
+<td width="170" align=right><font>24_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>userCard/summary</font></td>
+<td width="260"><font>经纪人身份证未上传</font></td>
+<td width="170" align=right><font>25_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>bnsCard/summary</font></td>
+<td width="260"><font>经纪人名片未上传</font></td>
+<td width="170" align=right><font>26_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>isVerify</font></td>
+<td width="260"><font>经纪人激活</font></td>
+<td width="170" align=right><font>27_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>isVerify</font></td>
+<td width="260"><font>经纪人未激活</font></td>
+<td width="170" align=right><font>28_jingjiren_result</font></td>
+</tr>
+<tr>
+<td width="80" align=center><font>经纪人</font></td>
+<td width="80" align=right><font>1.0</font></td>
+<td width="180"><font>getinfo</font></td>
+<td width="260"><font>经纪人基本信息</font></td>
+<td width="170" align=right><font>29_jingjiren_result</font></td>
+</tr>
+
+
+</tbody>
+</table>
+<br />
+
+如果有任何问题请联系尤凌飞（lingfeiyou@anjuke.com）</div>
+</div>
+<br>
+---------------------------------------------------------------------------
+<br>
+<b>安居客移动事业部移动测试团队出品
+</body>
+</html>
