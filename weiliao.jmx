@@ -1752,7 +1752,7 @@ group int 是否需要按不同的对象进行消息分组，0=不需要（默�
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;msg_type&quot;:&quot;1&quot;,&quot;to_uid&quot;:&quot;${Msg_b1_id}&quot;,&quot;body&quot;:&quot;微聊账号消息的发送和接收&quot;,&quot;uniqid&quot;:&quot;${__Random(100000,99999999,)}&quot;}</stringProp>
+                <stringProp name="Argument.value">{&quot;msg_type&quot;:&quot;1&quot;,&quot;to_uid&quot;:&quot;${Msg_b1_id}&quot;,&quot;body&quot;:&quot;微聊账号消息发收${__Random(00000000,9999999999,)}&quot;,&quot;uniqid&quot;:&quot;${__Random(100000,99999999,)}&quot;}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
