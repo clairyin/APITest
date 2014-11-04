@@ -29,12 +29,14 @@ def GenSummaryResult(filePath, genFilePath):
         fileR.close()
 
         fileW = open(genFilePath, "w")
-        wechat_total = 0
+        # wechat_total = 0
+        weiliao_total = 0
         anjuke_total = 0
         haozu_total = 0
         aifang_total = 0
         jingjiren_total = 0
-        wechat_fail = 0
+        # wechat_fail = 0
+        weiliao_fail = 0
         anjuke_fail = 0
         haozu_fail = 0
         aifang_fail = 0
@@ -76,10 +78,15 @@ def GenSummaryResult(filePath, genFilePath):
                                         if(result != 'true'):
                                                jingjiren_fail = jingjiren_fail + 1 
 
-                                if(app == 'WeChat_SERVER 1-1'):
-                                        wechat_total = wechat_total + 1
+                                # if(app == 'WeChat_SERVER 1-1'):
+                                #         wechat_total = wechat_total + 1
+                                #         if(result != 'true'):
+                                #                wechat_fail = wechat_fail + 1 
+
+                                if(app == 'Wechat_Common 1-1'):
+                                        weiliao_total = weiliao_total + 1
                                         if(result != 'true'):
-                                               wechat_fail = wechat_fail + 1 
+                                               weiliao_fail = weiliao_fail + 1 
 
                 if filePath.count('anjuke.jtl') > 0:
                         #print str(anjuke_total)
@@ -129,17 +136,27 @@ def GenSummaryResult(filePath, genFilePath):
                         temp3 = str(round((float(jingjiren_total) - float(jingjiren_fail)) / float(jingjiren_total),3)*100)
                         s = s.replace("jingjiren_rate" , temp3 + "%")
 
-                if filePath.count('wechat.jtl') > 0:
-                        s = s.replace("wechat_total" , str(wechat_total))
-                        #s = s.replace("wechat_fail" , str(wechat_fail))
-                        if(wechat_fail == 0):
-                                s = s.replace('<font>wechat_fail','<font color="green">' +  '0')
-                        else:
-                                s = s.replace('<font>wechat_fail','<font color="red">'  + str(wechat_fail))
-                        s = s.replace("wechat_pass" , str(int(wechat_total) - int(wechat_fail)))
-                        temp4 = str(round((float(wechat_total) - float(wechat_fail)) / float(wechat_total),3)*100)
-                        s = s.replace("wechat_rate" , temp4 + "%")
+                # # if filePath.count('wechat.jtl') > 0:
+                # #         s = s.replace("wechat_total" , str(wechat_total))
+                # #         #s = s.replace("wechat_fail" , str(wechat_fail))
+                # #         if(wechat_fail == 0):
+                # #                 s = s.replace('<font>wechat_fail','<font color="green">' +  '0')
+                # #         else:
+                # #                 s = s.replace('<font>wechat_fail','<font color="red">'  + str(wechat_fail))
+                # #         s = s.replace("wechat_pass" , str(int(wechat_total) - int(wechat_fail)))
+                # #         temp4 = str(round((float(wechat_total) - float(wechat_fail)) / float(wechat_total),3)*100)
+                #         s = s.replace("wechat_rate" , temp4 + "%")
 
+                if filePath.count('weiliao.jtl') > 0:
+                        s = s.replace("weiliao_total" , str(weiliao_total))
+                        #s = s.replace("wechat_fail" , str(wechat_fail))
+                        if(weiliao_fail == 0):
+                                s = s.replace('<font>weiliao_fail','<font color="green">' +  '0')
+                        else:
+                                s = s.replace('<font>weiliao_fail','<font color="red">'  + str(weiliao_fail))
+                        s = s.replace("weiliao_pass" , str(int(weiliao_total) - int(weiliao_fail)))
+                        temp4 = str(round((float(weiliao_total) - float(weiliao_fail)) / float(weiliao_total),3)*100)
+                        s = s.replace("weiliao_rate" , temp4 + "%")
                         
                         
 
@@ -165,7 +182,8 @@ def GenResult(filePath, genFilePath,times):
         haozu_List = [([0] * 2) for i in range(10000)]
         aifang_List = [([0] * 2) for i in range(10000)]
         jingjiren_List = [([0] * 2) for i in range(10000)]
-        wechat_List = [([0] * 2) for i in range(10000)]
+        # wechat_List = [([0] * 2) for i in range(10000)]
+        weiliao_List = [([0] * 2) for i in range(10000)]
         total_Line = 0
  
 	try:
@@ -220,10 +238,16 @@ def GenResult(filePath, genFilePath,times):
                                 if(result_List[x][2] != 'true'):
                                         jingjiren_List[x%(total_Line/int(times))][1] = jingjiren_List[x%(total_Line/int(times))][1] + 1
 
-                        if(result_List[x][1] == 'WeChat_SERVER 1-1'):
-                                wechat_List[x%(total_Line/int(times))][0] = result_List[x][0]
+                        if(result_List[x][1] == 'Wechat_Common 1-1'):
+                                weiliao_List[x%(total_Line/int(times))][0] = result_List[x][0]
                                 if(result_List[x][2] != 'true'):
-                                        wechat_List[x%(total_Line/int(times))][1] = wechat_List[x%(total_Line/int(times))][1] + 1
+                                        weiliao_List[x%(total_Line/int(times))][1] = weiliao_List[x%(total_Line/int(times))][1] + 1
+
+
+                        # if(result_List[x][1] == 'WeChat_SERVER 1-1'):
+                        #         wechat_List[x%(total_Line/int(times))][0] = result_List[x][0]
+                        #         if(result_List[x][2] != 'true'):
+                        #                 wechat_List[x%(total_Line/int(times))][1] = wechat_List[x%(total_Line/int(times))][1] + 1
 
                 if filePath.count('anjuke.jtl') > 0:
                         for i in range(0,total_Line/int(times)):
@@ -254,12 +278,19 @@ def GenResult(filePath, genFilePath,times):
                                 else:
                                         s = s.replace('<font>' + str(i) + '_jingjiren_result','<font color="red">'  + str(jingjiren_List[i][1]) + ' ' + '/ ' + str(times))
 
-                elif filePath.count('wechat.jtl') > 0:
+                elif filePath.count('weiliao.jtl') > 0:
                         for i in range(0,total_Line/int(times)):
-                                if(wechat_List[i][1] == 0):
-                                        s = s.replace('<font>' + str(i) + '_wechat_result','<font color="green">' +  '0 / ' + str(times) + ' '  + '</font>')
+                                if(weiliao_List[i][1] == 0):
+                                        s = s.replace('<font>' + str(i) + '_weiliao_result','<font color="green">' +  '0 / ' + str(times) + ' '  + '</font>')
                                 else:
-                                        s = s.replace('<font>' + str(i) + '_wechat_result','<font color="red">'  + str(wechat_List[i][1]) + ' ' + '/ ' + str(times))
+                                        s = s.replace('<font>' + str(i) + '_weiliao_result','<font color="red">'  + str(weiliao_List[i][1]) + ' ' + '/ ' + str(times))
+
+                # elif filePath.count('wechat.jtl') > 0:
+                #         for i in range(0,total_Line/int(times)):
+                #                 if(wechat_List[i][1] == 0):
+                #                         s = s.replace('<font>' + str(i) + '_wechat_result','<font color="green">' +  '0 / ' + str(times) + ' '  + '</font>')
+                #                 else:
+                #                         s = s.replace('<font>' + str(i) + '_wechat_result','<font color="red">'  + str(wechat_List[i][1]) + ' ' + '/ ' + str(times))
         
 
 

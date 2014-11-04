@@ -549,7 +549,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/mobile/1.3/property.getDescription?api_key=ef7545201a2bc5911cdb43527b18b8c1&amp;id=11-214508481&amp;sig=477a1f34760e57acc2d0d2022e7ae328</stringProp>
+          <stringProp name="HTTPSampler.path">/mobile/1.3/property.getDescription?api_key=ef7545201a2bc5911cdb43527b18b8c1&amp;id=11-239443974&amp;sig=8c407ddeb251ac921ba8d6e6a62ac978</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
