@@ -73,7 +73,7 @@ def SceRepo(resultFilePath, summaryRepoPath, detailRepoPath, sceName,numAPI):
           if (sce_fail == 0):
               s = s.replace('<font color="red">' + sceName + '_fail' , '<font color="green">' + str(sce_fail))
               s = s.replace(sceName + '_rate' , rate + "%")
-              d = d.replace(sceName + '_result' , res)
+              d = d.replace('<font>' + sceName + '_result' , '<font color="green">' + res)
 
           else:
               s = s.replace(sceName + '_fail' , str(sce_fail))

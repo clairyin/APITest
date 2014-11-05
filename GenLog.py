@@ -147,7 +147,7 @@ def GenSummaryResult(filePath, genFilePath):
                 # #         temp4 = str(round((float(wechat_total) - float(wechat_fail)) / float(wechat_total),3)*100)
                 #         s = s.replace("wechat_rate" , temp4 + "%")
 
-                if filePath.count('weiliao.jtl') > 0:
+                if filePath.count('weiliao_common.jtl') > 0:
                         s = s.replace("weiliao_total" , str(weiliao_total))
                         #s = s.replace("wechat_fail" , str(wechat_fail))
                         if(weiliao_fail == 0):
@@ -199,7 +199,6 @@ def GenResult(filePath, genFilePath,times):
                                 testcase = temp[2]
                                 app = temp[5]
                                 result = temp[7]
-                                #print testcase
                                 #print total_Line
                                 result_List[total_Line][0] = testcase
                                 result_List[total_Line][1] = app
@@ -238,11 +237,11 @@ def GenResult(filePath, genFilePath,times):
                                 if(result_List[x][2] != 'true'):
                                         jingjiren_List[x%(total_Line/int(times))][1] = jingjiren_List[x%(total_Line/int(times))][1] + 1
 
-                        if(result_List[x][1] == 'Wechat_Common 1-1'):
+                        if(result_List[x][1] == 'Wechat_Common 1-1'):            
                                 weiliao_List[x%(total_Line/int(times))][0] = result_List[x][0]
                                 if(result_List[x][2] != 'true'):
                                         weiliao_List[x%(total_Line/int(times))][1] = weiliao_List[x%(total_Line/int(times))][1] + 1
-
+                                       
 
                         # if(result_List[x][1] == 'WeChat_SERVER 1-1'):
                         #         wechat_List[x%(total_Line/int(times))][0] = result_List[x][0]
@@ -278,7 +277,7 @@ def GenResult(filePath, genFilePath,times):
                                 else:
                                         s = s.replace('<font>' + str(i) + '_jingjiren_result','<font color="red">'  + str(jingjiren_List[i][1]) + ' ' + '/ ' + str(times))
 
-                elif filePath.count('weiliao.jtl') > 0:
+                elif filePath.count('weiliao_common.jtl') > 0:
                         for i in range(0,total_Line/int(times)):
                                 if(weiliao_List[i][1] == 0):
                                         s = s.replace('<font>' + str(i) + '_weiliao_result','<font color="green">' +  '0 / ' + str(times) + ' '  + '</font>')
