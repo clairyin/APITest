@@ -357,7 +357,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/userPhoto/?is_nocheck=1&amp;brokerId=1389647&amp;photoFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/userPhoto/?is_nocheck=1&amp;brokerId=1389657&amp;photoFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -383,7 +383,7 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
@@ -491,7 +491,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/bnsCard/?is_nocheck=1&amp;brokerId=1389647&amp;bnsCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}&amp;bnsCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/bnsCard/?is_nocheck=1&amp;brokerId=1389657&amp;bnsCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}&amp;bnsCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -517,13 +517,13 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/bnsCard/?is_nocheck=1&amp;brokerId=899646&amp;bnsCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/upload/bnsCard/?is_nocheck=1&amp;brokerId=1389657&amp;bnsCardFile={&quot;exists&quot;:0,&quot;format&quot;:&quot;JPEG&quot;,&quot;hash&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;height&quot;:912,&quot;host&quot;:1,&quot;id&quot;:&quot;1f0ba120174f59d1d76d5986648ff211&quot;,&quot;size&quot;:157341,&quot;width&quot;:610}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -537,9 +537,7 @@
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="1151053392">&quot;status&quot;:&quot;error&quot;</stringProp>
-              <stringProp name="-1384596895">&quot;errcode&quot;:&quot;1019&quot;</stringProp>
-              <stringProp name="-1786003683">&quot;message&quot;</stringProp>
+              <stringProp name="-985346923">{&quot;status&quot;:&quot;ok&quot;,&quot;data&quot;:{&quot;status&quot;:&quot;1&quot;}}</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
@@ -721,13 +719,13 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/userPhoto/summary/?is_nocheck=1&amp;brokerId=7790834</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/userPhoto/summary/?is_nocheck=1&amp;brokerId=1517423</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -741,7 +739,7 @@
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="298415669">{&quot;status&quot;:&quot;ok&quot;,&quot;data&quot;:{&quot;status&quot;:&quot;1&quot;</stringProp>
+              <stringProp name="-1863374556">{&quot;status&quot;:&quot;ok&quot;,&quot;data&quot;:{&quot;status&quot;:&quot;</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
@@ -753,13 +751,13 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/userCard/summary/?is_nocheck=1&amp;brokerId=7790834</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/userCard/summary/?is_nocheck=1&amp;brokerId=1517423</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -773,7 +771,7 @@
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="298415669">{&quot;status&quot;:&quot;ok&quot;,&quot;data&quot;:{&quot;status&quot;:&quot;1&quot;</stringProp>
+              <stringProp name="-1863374556">{&quot;status&quot;:&quot;ok&quot;,&quot;data&quot;:{&quot;status&quot;:&quot;</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
@@ -785,13 +783,13 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/bnsCard/summary/?is_nocheck=1&amp;brokerId=7790834</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/bnsCard/summary/?is_nocheck=1&amp;brokerId=1517423</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -805,7 +803,7 @@
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="298415669">{&quot;status&quot;:&quot;ok&quot;,&quot;data&quot;:{&quot;status&quot;:&quot;1&quot;</stringProp>
+              <stringProp name="-1863374556">{&quot;status&quot;:&quot;ok&quot;,&quot;data&quot;:{&quot;status&quot;:&quot;</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
@@ -881,13 +879,13 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/userPhoto/summary/?is_nocheck=1&amp;brokerId=7790852</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/userPhoto/summary/?is_nocheck=1&amp;brokerId=1515082</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -913,13 +911,13 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/userCard/summary/?is_nocheck=1&amp;brokerId=7790852</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/userCard/summary/?is_nocheck=1&amp;brokerId=1515082</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -945,13 +943,13 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_online}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/bnsCard/summary/?is_nocheck=1&amp;brokerId=7790852</stringProp>
+          <stringProp name="HTTPSampler.path">mobile-ajk-broker/1.0/broker/bnsCard/summary/?is_nocheck=1&amp;brokerId=1515082</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
