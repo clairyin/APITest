@@ -1,5 +1,5 @@
-#!/usr/bin/python
-
+﻿#!/usr/bin/python
+# -*- coding: utf-8 -*-
 ######################################################################################
 # Automation Scripts
 #
@@ -20,9 +20,12 @@ from xml.dom import minidom
 from xml.dom.minidom import parse, parseString, Document
 import xml.etree.ElementTree
 import os, sys, string, datetime, time, re, codecs, decimal, optparse
+import codecs;
+reload(sys)
+sys.setdefaultencoding( "utf-8" )
 
 def GenSummaryResult(filePath, genFilePath):
-       
+        # print "filePath: " + filePath
         inputfile = open(filePath)
         fileR = open(genFilePath, "r")
         s = fileR.read()
@@ -74,7 +77,6 @@ def GenSummaryResult(filePath, genFilePath):
 
                                 if(app == 'Jingjiren_SERVER 1-1'):
                                         jingjiren_total = jingjiren_total + 1
-                                        print jingjiren_total
                                         if(result != 'true'):
                                                jingjiren_fail = jingjiren_fail + 1 
 
@@ -167,7 +169,8 @@ def GenSummaryResult(filePath, genFilePath):
                 fileW.close()                                
         
 def GenResult(filePath, genFilePath,times):
-       
+        # print "filePath: " + filePath
+        genFilePath='results.html'
         inputfile = open(filePath)
         fileR = open(genFilePath, "r")
         s = fileR.read()
@@ -300,20 +303,107 @@ def GenResult(filePath, genFilePath,times):
                 fileW.write(s)
                 fileW.close()
 
-            
-                  
-	#except:
-                #print "throw exception from GenResult"
-                #pass
-	
+def ReadConfig():
+    # coding=gbk
+    print "enter ReadConfig"
+    APIDetailDict = {}
+    APIDetailList = []
+    anjuke_count = 0
+    jingjiren_count = 0
+    haozu_count = 0
+    aifang_count = 0
+    weiliao_count = 0
+    readoutFp = codecs.open('../APIDetails.txt', 'r', 'UTF-8');
+    #here already is unicode, for we have pass "UTF-8" to codecs.open
+    try:
+        os.remove( 'results.html' )
+    except:
+        pass
+    outputFp = codecs.open("results.html", 'w');
+    s='<table border="1"><tr><th colspan=9><caption align="center"><b>API-CI自动化测试报告</b></caption></th></tr><tbody><tr><td width="80" align=center><font>应用模块</font></td><td width="80" align=center><font>API版本</font></td><td width="80" align=center><font>接口名字</font></td><td width="80" align=center><font>接口描述</font></td><td width="170" align=center><font>测试结果（失败/总数）</font></td></tr>'
+    try:
+                        for line in readoutFp:
+                            temp = line.split(' ')
+                            if(temp[0].find("安居客")>=0):
+                                APIDetailDict = dict(seq=anjuke_count,app=temp[0],ver=temp[1],api=temp[2],desc=temp[3],result=0)
+                                APIDetailList.append(APIDetailDict)
+                                anjuke_count=anjuke_count+1
+
+                                s=s+'<tr><td width="80" align=center><font>'+ APIDetailDict['app']+'</font></td>'
+                                s=s+'<td width="80" align=right><font>'+ APIDetailDict['ver']+'</font></td>'
+                                s=s+'<td width="180"><font>'+ APIDetailDict['api']+'</font></td>'
+                                s=s+'<td width="260"><font>'+APIDetailDict['desc']+'</font></td>'
+                                s=s+'<td width="260"><font>'+ str(APIDetailDict['seq'])+'_anjuke_result'+'</font></td></tr>'
+                                # print APIDetailDict['api'] + str(APIDetailDict['seq'])
+
+                            elif(temp[0].find("好租")>=0):
+                                #print temp[2]
+                                #print haozu_count
+                                APIDetailDict = dict(seq=haozu_count,app=temp[0],ver=temp[1],api=temp[2],desc=temp[3],result=0)
+                                APIDetailList.append(APIDetailDict)
+                                haozu_count=haozu_count+1
+
+                                s=s+'<tr><td width="80" align=center><font>'+ APIDetailDict['app']+'</font></td>'
+                                s=s+'<td width="80" align=right><font>'+ APIDetailDict['ver']+'</font></td>'
+                                s=s+'<td width="180"><font>'+ APIDetailDict['api']+'</font></td>'
+                                s=s+'<td width="260"><font>'+APIDetailDict['desc']+'</font></td>'
+                                s=s+'<td width="260"><font>'+ str(APIDetailDict['seq'])+'_haozu_result'+'</font></td></tr>'
+                                # print APIDetailDict['api'] + str(APIDetailDict['seq'])
+
+                            elif(temp[0].find("爱房")>=0):
+                                APIDetailDict = dict(seq=aifang_count,app=temp[0],ver=temp[1],api=temp[2],desc=temp[3],result=0)
+                                APIDetailList.append(APIDetailDict)
+                                aifang_count=aifang_count+1
+
+                                s=s+'<tr><td width="80" align=center><font>'+ APIDetailDict['app']+'</font></td>'
+                                s=s+'<td width="80" align=right><font>'+ APIDetailDict['ver']+'</font></td>'
+                                s=s+'<td width="180"><font>'+ APIDetailDict['api']+'</font></td>'
+                                s=s+'<td width="260"><font>'+APIDetailDict['desc']+'</font></td>'
+                                s=s+'<td width="260"><font>'+ str(APIDetailDict['seq'])+'_aifang_result'+'</font></td></tr>'
+                                # print APIDetailDict['api'] + str(APIDetailDict['seq'])
+
+                            elif(temp[0].find("经纪人")>=0):
+                                APIDetailDict = dict(seq=jingjiren_count,app=temp[0],ver=temp[1],api=temp[2],desc=temp[3],result=0)
+                                APIDetailList.append(APIDetailDict)
+                                jingjiren_count=jingjiren_count+1
+
+                                s=s+'<tr><td width="80" align=center><font>'+ APIDetailDict['app']+'</font></td>'
+                                s=s+'<td width="80" align=right><font>'+ APIDetailDict['ver']+'</font></td>'
+                                s=s+'<td width="180"><font>'+ APIDetailDict['api']+'</font></td>'
+                                s=s+'<td width="260"><font>'+APIDetailDict['desc']+'</font></td>'
+                                s=s+'<td width="260"><font>'+ str(APIDetailDict['seq'])+'_jingjiren_result'+'</font></td></tr>'
+                                # print APIDetailDict['api'] + str(APIDetailDict['seq'])
+
+                            elif(temp[0].find("微聊")>=0):
+                                APIDetailDict = dict(seq=weiliao_count,app=temp[0],ver=temp[1],api=temp[2],desc=temp[3],result=0)
+                                APIDetailList.append(APIDetailDict)
+                                weiliao_count=weiliao_count+1
+
+                                s=s+'<tr><td width="80" align=center><font>'+ APIDetailDict['app']+'</font></td>'
+                                s=s+'<td width="80" align=right><font>'+ APIDetailDict['ver']+'</font></td>'
+                                s=s+'<td width="180"><font>'+ APIDetailDict['api']+'</font></td>'
+                                s=s+'<td width="260"><font>'+APIDetailDict['desc']+'</font></td>'
+                                s=s+'<td width="260"><font>'+ str(APIDetailDict['seq'])+'_weiliao_result'+'</font></td></tr>'
+                                # print APIDetailDict['api'] + str(APIDetailDict['seq'])
+                        s=s+'</table>'
+    finally:
+        readoutFp.close();
+        outputFp.write(s);
+        outputFp.flush();
+        outputFp.close();
 
 if __name__ == '__main__':
         filePath = sys.argv[1]
         sumPath = sys.argv[2]
         detailPath = sys.argv[3]
         times = sys.argv[4]
-      
+        print "start.."
         GenSummaryResult(filePath, sumPath)
-        GenResult(filePath, detailPath, times)
+        ReadConfig()
+        GenResult("anjuke.jtl", detailPath, times)
+        GenResult("haozu.jtl", detailPath, times)
+        GenResult("aifang.jtl", detailPath, times)
+        GenResult("jingjiren.jtl", detailPath, times)
+        GenResult("weiliao_common.jtl", detailPath, times)
 
 

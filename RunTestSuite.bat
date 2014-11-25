@@ -13,6 +13,7 @@ D:
 
 cmd /c copy %WORKSPACE%\template.html %TEST_RESULT_PATH%\results.html
 cmd /c copy %WORKSPACE%\summary.html %TEST_RESULT_PATH%\summary.html
+cmd /c copy %WORKSPACE%\scene.html %TEST_RESULT_PATH%\sceresults.html
 
 
 
@@ -48,13 +49,13 @@ cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\aifang.jtl %TEST_RESULT_PATH%\su
 cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\jingjiren.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %times%
 cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\weiliao_common.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %times%
 
-cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html AccountMessageSendAndGet 2
-cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html AccountMsgBlackList 7
-cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html ReadMessages 4
-cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html ReceiveMessages 5
-cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html BrokerSwitchStatus 4
-cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html AppMsgBlackList 4
-cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html AppMessageSendAndGet 2
+cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\sceresults.html AccountMessageSendAndGet 2
+cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\sceresults.html AccountMsgBlackList 7
+cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\sceresults.html ReadMessages 4
+cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\sceresults.html ReceiveMessages 5
+cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\sceresults.html BrokerSwitchStatus 4
+cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\sceresults.html AppMsgBlackList 4
+cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\sceresults.html AppMessageSendAndGet 2
 
 
 
