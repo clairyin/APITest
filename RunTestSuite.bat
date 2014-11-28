@@ -43,11 +43,11 @@ cmd /c jmeter -n -t %WORKSPACE%\weiliao_common.jmx -l %WORKSPACE%\TestResults\we
 
 ping -n 5 127.1 >nul 2>nul
 
-cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\anjuke.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %times%
-cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\haozu.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %times%
-cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\aifang.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %times%
-cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\jingjiren.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %times%
-cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\weiliao_common.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %times%
+cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\anjuke.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %WORKSPACE%\anjuke.jmx %times%
+cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\haozu.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %WORKSPACE%\haozu.jmx %times%
+cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\aifang.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %WORKSPACE%\aifang.jmx %times%
+cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\jingjiren.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %WORKSPACE%\jingjiren.jmx %times%
+cmd /c %WORKSPACE%\GenLog.py %TEST_RESULT_PATH%\weiliao_common.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\results.html %WORKSPACE%\weiliao_common.jmx %times%
 
 cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\sceresults.html AccountMessageSendAndGet 2
 cmd /c %WORKSPACE%\SceneAPI.py %TEST_RESULT_PATH%\weiliao.jtl %TEST_RESULT_PATH%\summary.html %TEST_RESULT_PATH%\sceresults.html AccountMsgBlackList 7
