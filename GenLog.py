@@ -25,7 +25,7 @@ reload(sys)
 sys.setdefaultencoding( "utf-8" )
 
 def GenSummaryResult(filePath, genFilePath):
-        # print "filePath: " + filePath
+        print "filePath: " + filePath
         inputfile = open(filePath)
         fileR = open(genFilePath, "r")
         s = fileR.read()
@@ -355,7 +355,6 @@ def ReadConfig(jmxPath):
 
         if (jmxPath.count('haozu.jmx') > 0):
                   s = s + head
-                  print '**', s, '**'
                   for line in jmxFile:
                       app = '好租'
                       # print line
@@ -386,7 +385,6 @@ def ReadConfig(jmxPath):
 
         if (jmxPath.count('aifang.jmx') > 0):
                   s = s + head
-                  print '**', s, '**'
                   for line in jmxFile:
                       app = '爱房'
                       # print line
@@ -417,7 +415,6 @@ def ReadConfig(jmxPath):
 
         if (jmxPath.count('jingjiren.jmx') > 0):
                   s = s + head
-                  print '**', s, '**'
                   for line in jmxFile:
                       app = '经纪人'
                       # print line
@@ -448,7 +445,6 @@ def ReadConfig(jmxPath):
 
         if (jmxPath.count('weiliao_common.jmx') > 0):
                   s = s + head
-                  print '**', s, '**'
                   for line in jmxFile:
                       app = '微聊'
                       # print line
